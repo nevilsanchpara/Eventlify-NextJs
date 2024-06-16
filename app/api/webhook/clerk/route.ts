@@ -6,7 +6,6 @@ import { clerkClient } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
-  console.log("CALLED!!!!!!!!!!!");
   const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET;
 
   if (!WEBHOOK_SECRET) {
@@ -52,38 +51,37 @@ export async function POST(req: Request) {
   }
 
   // Get the ID and type
-  // const { id } = evt.data;
+  const { id } = evt.data;
   const eventType = evt.type;
-  console.log(eventType, "Event Type");
 
-  // if (eventType === "user.created") {
-  console.log("inside");
-  console.log(evt.data, "data");
-  const { id, email_addresses, image_url, first_name, last_name, username } =
-    evt.data;
+  console.log("called", evt.data, evt.type);
 
-  const user = {
-    clerkId: id,
-    email: email_addresses[0].email_address,
-    username: username!,
-    firstName: first_name,
-    lastName: last_name,
-    photo: image_url,
-  };
+  if (eventType === "user.created") {
+    const { id, email_addresses, image_url, first_name, last_name, username } =
+      evt.data;
 
-  const newUser = await createUser(user);
-  console.log("called new user", newUser);
+    const user = {
+      clerkId: id,
+      email: email_addresses[0].email_address,
+      username: username!,
+      firstName: first_name,
+      lastName: last_name,
+      photo: image_url,
+    };
 
-  if (newUser) {
-    await clerkClient.users.updateUserMetadata(id, {
-      publicMetadata: {
-        userId: newUser._id,
-      },
-    });
+    const newUser = await createUser(user);
+    console.log(newUser);
+
+    if (newUser) {
+      await clerkClient.users.updateUserMetadata(id, {
+        publicMetadata: {
+          userId: newUser._id,
+        },
+      });
+    }
+
+    return NextResponse.json({ message: "OK", user: newUser });
   }
-
-  return NextResponse.json({ message: "OK", user: newUser });
-  // }
 
   if (eventType === "user.updated") {
     const { id, image_url, first_name, last_name, username } = evt.data;
