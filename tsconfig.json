@@ -27,7 +27,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/(root)/events/create/page.jsx"
+    "app/(root)/events/create/page.jsx",
+    "app/(root)/profile/page.jsx"
   ],
   "exclude": ["node_modules"]
 }
