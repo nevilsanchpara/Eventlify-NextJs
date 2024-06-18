@@ -71,11 +71,15 @@ export async function POST(req: Request) {
     console.log(newUser, " new user", newUser._id, "id");
     if (newUser) {
       console.log("calledd");
-      await clerkClient.users.updateUserMetadata(id, {
-        publicMetadata: {
-          userId: newUser._id,
-        },
-      });
+      try {
+        await clerkClient.users.updateUserMetadata(id, {
+          publicMetadata: {
+            userId: newUser._id,
+          },
+        });
+      } catch (error: any) {
+        console.log("error", error);
+      }
     }
     return NextResponse.json({ message: "OK", user: {} });
   }
