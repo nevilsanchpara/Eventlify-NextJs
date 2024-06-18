@@ -5,8 +5,13 @@ const CreateEvent = () => {
   const { sessionClaims } = auth();
 
   console.log(sessionClaims, "session");
-  const userId = sessionClaims?.userId as string;
-  console.log(" Useid page", userId);
+  const userId = sessionClaims?.public_metadata?.myid as string;
+  console.log(
+    "Useid page",
+    userId,
+    sessionClaims.public_metadata.myid,
+    sessionClaims.public_metadata
+  );
 
   return (
     <>
