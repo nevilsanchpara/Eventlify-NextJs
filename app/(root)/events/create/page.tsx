@@ -1,12 +1,16 @@
 import EventForm from "@/components/shared/EventForm";
 import { auth } from "@clerk/nextjs";
+import { useUser } from "@clerk/clerk-react";
 
 const CreateEvent = () => {
-  const { sessionClaims, session } = auth();
+  const { sessionClaims, session, userId } = auth();
+  const { isSignedIn, user, isLoaded } = useUser();
+  console.log("user", user);
+  console.log("userId", userId);
 
   console.log(sessionClaims, "session", session, "session");
-  const userId = sessionClaims?.userId as string;
-  console.log(" Useid page", userId);
+  const a = sessionClaims?.userId as string;
+  console.log(" Useid page", a);
 
   return (
     <>
@@ -17,7 +21,7 @@ const CreateEvent = () => {
       </section>
 
       <div className="wrapper my-8">
-        <EventForm userId={userId} type="Create" />
+        <EventForm userId={a} type="Create" />
       </div>
     </>
   );
