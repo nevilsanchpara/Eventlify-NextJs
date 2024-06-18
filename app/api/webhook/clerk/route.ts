@@ -68,9 +68,9 @@ export async function POST(req: Request) {
       photo: image_url,
     };
     const newUser = await createUser(user);
-    console.log(newUser, " new user", newUser._id, "id");
+    console.log(newUser, " new user", newUser._id, "id", "simple id", id);
     if (newUser) {
-      console.log("calledd");
+      console.log("calledd", clerkClient.users, "update");
       try {
         await clerkClient.users.updateUserMetadata(id, {
           publicMetadata: {
