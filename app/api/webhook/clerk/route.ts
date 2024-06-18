@@ -72,11 +72,12 @@ export async function POST(req: Request) {
     if (newUser) {
       console.log("calledd", clerkClient.users, "update");
       try {
-        await clerkClient.users.updateUserMetadata(id, {
+        const a = await clerkClient.users.updateUserMetadata(id, {
           publicMetadata: {
             userId: newUser._id,
           },
         });
+        console.log(a, "A");
       } catch (error: any) {
         console.log("error", error);
       }
