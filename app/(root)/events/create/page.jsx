@@ -5,7 +5,7 @@ const CreateEvent = () => {
   const { sessionClaims } = auth();
 
   console.log(sessionClaims, "session");
-  const userId = sessionClaims?.public_metadata?.myid as string;
+  const userId = sessionClaims?.public_metadata?.myid;
   console.log(
     "Useid page",
     userId,
