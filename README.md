@@ -87,6 +87,7 @@ To run this project, you will need to add the following environment variables to
 ![App Screenshot](https://i.ibb.co/WsGBL90/Screenshot-2024-10-26-at-5-34-21-AM.png)
 
 ![App Screenshot](https://i.ibb.co/WBT48Tg/Screenshot-2024-10-26-at-5-35-41-AM.png)
+
 ![App Screenshot](https://i.ibb.co/vwMXfw9/Screenshot-2024-10-26-at-5-36-11-AM.png)
 
 ![App Screenshot](https://i.ibb.co/HpDzvL2/Screenshot-2024-10-26-at-5-36-30-AM.png)
