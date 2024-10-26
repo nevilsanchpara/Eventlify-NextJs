@@ -89,3 +89,6 @@ To run this project, you will need to add the following environment variables to
 
 ![App Screenshot](https://i.ibb.co/N2WwrYz/Screenshot-2024-10-26-at-5-36-53-AM.png)
 
+<img src="https://i.ibb.co/N62BzZg/Screenshot-2024-10-26-at-5-33-49-AM.png" width="1000" alt="App Screenshot 1"/> <img src="https://i.ibb.co/WsGBL90/Screenshot-2024-10-26-at-5-34-21-AM.png" width="1000" alt="App Screenshot 2"/> <img src="https://i.ibb.co/WBT48Tg/Screenshot-2024-10-26-at-5-35-41-AM.png" width="1000" alt="App Screenshot 3"/> <img src="https://i.ibb.co/vwMXfw9/Screenshot-2024-10-26-at-5-36-11-AM.png" width="1000" alt="App Screenshot 4"/> <img src="https://i.ibb.co/HpDzvL2/Screenshot-2024-10-26-at-5-36-30-AM.png" width="1000" alt="App Screenshot 5"/> <img src="https://i.ibb.co/N2WwrYz/Screenshot-2024-10-26-at-5-36-53-AM.png" width="1000" alt="App Screenshot 6"/> ```
+
+
