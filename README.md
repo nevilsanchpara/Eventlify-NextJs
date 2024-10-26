@@ -55,7 +55,6 @@ To run this project, you will need to add the following environment variables to
 
 #### Server
 `NEXT_PUBLIC_SERVER_URL=`
-
 `PORT=`
 
 #### Stripe
