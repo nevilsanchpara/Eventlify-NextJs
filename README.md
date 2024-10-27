@@ -16,7 +16,9 @@
 - [@nevilsanchpara](https://www.github.com/nevilsanchpara)
 
 ## 🎬 Demo
-Check out the live demo: [Eventlify Demo](https://eventlify-nextjs.onrender.com/)
+- https://eventlify-nextjs.onrender.com/
+
+- https://nevil-eventlify.vercel.app/
 
 ### Demo Credentials:
 - **Email**: gomad30168@nestvia.com  
